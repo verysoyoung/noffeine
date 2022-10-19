@@ -1,10 +1,14 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-
+import SearchForm from '@components/search/SearchForm'
+import Footer from '@components/layout/Footer'
 const Home: NextPage = () => {
-  return <>Home</>
+  return (
+    <>
+      <SearchForm />
+      Home
+      <Footer />
+    </>
+  )
 }
 
 export default Home
