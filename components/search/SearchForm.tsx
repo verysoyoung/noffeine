@@ -8,6 +8,13 @@ export default function SearchForm() {
   )
 }
 
-const Button = styled.button``
-const Form = styled.input``
-const Wrap = styled.div``
+const Button = styled.button`
+  width: 20%;
+`
+const Form = styled.input`
+  width: 80%;
+`
+const Wrap = styled.div`
+  width: 100%;
+  display: flex;
+`
