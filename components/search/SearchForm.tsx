@@ -10,11 +10,14 @@ export default function SearchForm() {
 
 const Button = styled.button`
   width: 20%;
+  padding: 20px 10px;
 `
 const Form = styled.input`
   width: 80%;
+  padding: 20px 10px;
 `
 const Wrap = styled.div`
   width: 100%;
   display: flex;
+  margin-top: 20px;
 `

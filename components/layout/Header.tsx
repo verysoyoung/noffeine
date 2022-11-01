@@ -8,6 +8,6 @@ const Wrap = styled.div`
   width: 100%;
   text-align: center;
   color: white;
-  padding: 10px 0;
+  padding: 20px 0;
   background-color: #7780d3;
 `

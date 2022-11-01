@@ -10,14 +10,18 @@ export default function Layout({ children }: AppLayoutProps) {
   return (
     <Wrap>
       <Header />
-      {children}
+      <ContentWrap>{children}</ContentWrap>
       <Footer />
     </Wrap>
   )
 }
 
+const ContentWrap = styled.div`
+  max-width: 800px;
+  margin: 0 auto 20px;
+  height: 73vh;
+`
+
 const Wrap = styled.div`
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
 `
