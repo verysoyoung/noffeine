@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 import { useEffect, useRef } from 'react'
 export default function Map() {
-  const mapElement = useRef(null)
+  const mapElement = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     const { naver } = window
-
+    console.log(naver, 'naver')
+    console.log(mapElement, 'mapElement')
     if (!mapElement.current || !naver) return
 
     // 지도에 표시할 위치의 위도와 경도 좌표를 파라미터로 넣어줍니다.
@@ -25,11 +26,15 @@ export default function Map() {
     })
   }, [])
 
-  return <div ref={mapElement} style={{ minHeight: '400px' }} />
+  return (
+    <Wrap>
+      <div ref={mapElement} style={{ minHeight: '100%' }} />
+    </Wrap>
+  )
 }
 
 const Wrap = styled.div`
   width: 100%;
+  height: 100%;
   border: 1px solid green;
-  height: 400px;
 `

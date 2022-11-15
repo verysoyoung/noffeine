@@ -4,7 +4,6 @@ import Map from 'components/map/Map'
 const Home: NextPage = () => {
   return (
     <>
-      <SearchForm />
       <Map />
     </>
   )

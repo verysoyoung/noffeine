@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from 'components/layout/Footer'
-import Header from 'components/layout/Header'
 import styled from 'styled-components'
+import SearchForm from 'components/search/SearchForm'
 type AppLayoutProps = {
   children: React.ReactNode
 }
@@ -9,17 +9,20 @@ type AppLayoutProps = {
 export default function Layout({ children }: AppLayoutProps) {
   return (
     <Wrap>
-      <Header />
-      <ContentWrap>{children}</ContentWrap>
-      <Footer />
+      <ContentWrap>
+        <SearchForm />
+        {children}
+      </ContentWrap>
+      {/* <Footer /> */}
     </Wrap>
   )
 }
 
 const ContentWrap = styled.div`
-  max-width: 800px;
-  margin: 0 auto 20px;
-  height: 73vh;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
 `
 
 const Wrap = styled.div`
