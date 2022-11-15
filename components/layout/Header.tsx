@@ -4,11 +4,9 @@ export default function Header() {
   return (
     <Wrap>
       <Menu>메뉴</Menu>
-      {/* <Logo>Noffeine</Logo> */}
     </Wrap>
   )
 }
-const Logo = styled.div``
 const Menu = styled.div`
   position: absolute;
   top: 20px;

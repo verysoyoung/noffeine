@@ -1,8 +1,17 @@
 import styled from 'styled-components'
-export default function SearchForm() {
+
+interface ClickProps {
+  setClick: () => void
+  click: boolean
+}
+export default function SearchForm({ setClick, click }: ClickProps) {
   return (
     <Wrap>
-      <Menu>햄버거</Menu>
+      <MenuClick
+        onClick={() => {
+          setClick(!click)
+        }}
+      ></MenuClick>
       <Form placeholder="카페검색" />
       <Button>검색</Button>
     </Wrap>
@@ -17,13 +26,12 @@ const Form = styled.input`
   width: 80%;
   padding: 20px 10px 20px 80px;
 `
-const Menu = styled.div`
+const MenuClick = styled.div`
   position: absolute;
   width: 50px;
   height: 50px;
   cursor: pointer;
-  border: 1px solid orange;
-  color: orange;
+  background-color: orange;
   top: 5px;
   left: 5px;
   display: flex;
