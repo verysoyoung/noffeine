@@ -21,10 +21,13 @@ export default function SearchForm({ setClick, click }: ClickProps) {
 const Button = styled.button`
   width: 20%;
   padding: 20px 10px;
+  background-color: orange;
+  color: #ffffff;
 `
 const Form = styled.input`
   width: 80%;
   padding: 20px 10px 20px 80px;
+  border: 1px solid orange;
 `
 const MenuClick = styled.div`
   position: absolute;
@@ -32,7 +35,7 @@ const MenuClick = styled.div`
   height: 50px;
   cursor: pointer;
   background-color: orange;
-  top: 5px;
+  top: 4px;
   left: 5px;
   display: flex;
   justify-content: center;
